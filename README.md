@@ -1,5 +1,9 @@
 <a name="readme-top"></a>
 
+<div align="center">
+  <h3><b>OOP School Library</b></h3>
+</div>
+
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
@@ -20,9 +24,9 @@
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-# 📖 School Library <a name="about-project"></a>
+# 📖 OOP School Library <a name="about-project"></a>
 
-**School Library** is a backend app that allows you keeping track of all the records of books in a library and who borrows them.
+**OOP School Library** is a backend app that allows you keeping track of all the records of books in a library and who borrows them.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -92,6 +96,11 @@ rubocop
 
 ## 👤 Author <a name="author"></a>
 
+👤 **A.I.M. Shihab Uddin Khan**
+
+- GitHub: [@shihabrafio](https://github.com/shihabrafio)
+- Twitter: [@shihab_uddin19](https://twitter.com/shihab_uddin19)
+- LinkedIn: [Shihab Uddin Khan](https://www.linkedin.com/in/shihab-uddin-khan-45620a16a/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
