@@ -59,15 +59,17 @@ In order to run this project you need:
 - [A terminal](https://code.visualstudio.com/docs/terminal/basics).
 
 ### Setup
+### Setup
 
 Clone this repository to your desired folder or download the Zip folder:
 
 ```
-git clone https://github.com/shihabrafio/OOP-School-Library
+git clone https://github.com/shihabrafio/OOP-School-Library.git
+```
 
 - Navigate to the location of the folder in your machine:
 
-**``you@your-Pc-name:~$ cd School-Library``**
+**``you@your-Pc-name:~$ cd OOP-School-Library``**
 
 ### Install
 
@@ -93,6 +95,7 @@ rubocop
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ## 👤 Author <a name="author"></a>
 
