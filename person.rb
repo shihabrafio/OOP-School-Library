@@ -32,7 +32,6 @@ class Person < Nameable
   def of_age?
     @age >= 18
   end
-
 end
 
 person = Person.new(22, 'maximilianus')
