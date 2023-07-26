@@ -27,7 +27,7 @@ class Person < Nameable
     @rentals << rental
   end
 
-  private
+  private :of_age?
 
   def of_age?
     @age >= 18
