@@ -10,6 +10,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+    - [UML Diagram] (#uml-diagram)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
@@ -44,6 +45,11 @@
 - **Add new students or teachers.**
 - **Add new books.**
 - **Save records of who borrowed a given book and when.**
+
+### UML Diagram <a name="uml-diagram"></a>
+
+<img src="school_library.PNG" alt="UML Diagram of School Library">
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
