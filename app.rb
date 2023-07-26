@@ -65,4 +65,25 @@ class App
     book = Book.new(title, author)
     @books.push(book)
   end
+
+  def create_rental()
+    puts 'Select a book from the following list by number'
+    list_books()
+    book_index = gets.chomp.to_i - 1
+    puts 'Select a person from the following list by number (not id)'
+    list_people()
+    person_index = gets.chomp.to_i - 1
+    puts 'Date?'
+    date = gets.chomp
+    rental = Rental.new(date, @books[book_index], @people[person_index])
+    @rentals.push(rental)
+  end
+
+  def list_rentals()
+    @rentals.each do |rental|
+      if rental.person.id == person.id
+        puts "Date: #{rental.date}, Book: #{rental.book.title}, Person: #{rental.person.name}"
+      end
+    end
+  end
 end
