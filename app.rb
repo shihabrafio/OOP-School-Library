@@ -56,5 +56,13 @@ class App
     person = Teacher.new(age, name, specialization)
     @people.push(person)
   end
-  
+
+  def create_book()
+    puts 'Title?'
+    title = gets.chomp
+    puts 'Author?'
+    author = gets.chomp
+    book = Book.new(title, author)
+    @books.push(book)
+  end
 end
