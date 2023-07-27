@@ -15,12 +15,14 @@ class App
     @books.each_with_index do |book, index|
       puts "#{index+1}) Title: \"#{book.title}\", Author: #{book.author}"
     end
+    puts ''
   end
 
   def list_people(_people)
     @people.each do |person|
       puts "[#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
     end
+    puts ''
   end
 
   def create_person
@@ -32,6 +34,7 @@ class App
       create_teacher()
     else
       puts 'Invalid option'
+      puts ''
     end
   end
 
@@ -47,6 +50,7 @@ class App
     person = Student.new(age, name, parent_permission)
     @people.push(person)
     puts 'Student created successfully'
+    puts ''
   end
 
   def create_teacher
@@ -60,6 +64,7 @@ class App
     person = Teacher.new(age, name, specialization)
     @people.push(person)
     puts 'Teacher created successfully'
+    puts ''
   end
 
   def create_book
@@ -70,6 +75,7 @@ class App
     book = Book.new(title, author)
     @books.push(book)
     puts 'Book created successfully'
+    puts ''
   end
 
   def create_rental(_books, _people)
@@ -90,6 +96,7 @@ class App
     rental = Rental.new(date, @books[book_index], @people[person_index])
     @rentals.push(rental)
     puts 'Rental created successfully'
+    puts ''
   end
 
   def list_rentals
@@ -101,5 +108,6 @@ class App
         puts "#{index+1}) Date: #{rental.date}, Book #{rental.book.title} by #{rental.book.author} borrowed by #{rental.person.name}"
       end
     end
+    puts ''
   end
 end
