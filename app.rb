@@ -10,10 +10,10 @@ class App
     @people = []
     @rentals = []
   end
-    
+
   def list_books(_books)
     @books.each_with_index do |book, index|
-      puts "#{index+1}) Title: \"#{book.title}\", Author: #{book.author}"
+      puts "#{index + 1}) Title: \"#{book.title}\", Author: #{book.author}"
     end
     puts ''
   end
@@ -29,9 +29,9 @@ class App
     print 'Do you want to create a student (1) or a teacher (2) :'
     person_type = gets.chomp.to_i
     if person_type == 1
-      create_student()
+      create_student
     elsif person_type == 2
-      create_teacher()
+      create_teacher
     else
       puts 'Invalid option'
       puts ''
@@ -39,7 +39,6 @@ class App
   end
 
   def create_student
-    person_type = 'student'
     print 'Age:'
     age = gets.chomp.to_i
     print 'Name:'
@@ -54,7 +53,6 @@ class App
   end
 
   def create_teacher
-    person_type = 'teacher'
     print 'Age:'
     age = gets.chomp.to_i
     print 'Name:'
@@ -81,13 +79,13 @@ class App
   def create_rental(_books, _people)
     puts 'Select a book from the following list by number:'
     @books.each_with_index do |book, index|
-      puts "#{index+1}. Title: \"#{book.title}\", Author: #{book.author}"
+      puts "#{index + 1}. Title: \"#{book.title}\", Author: #{book.author}"
     end
     book_index = gets.chomp.to_i
     book_index -= 1
     puts 'Select a person from the following list by number (not id):'
     @people.each_with_index do |person, index|
-      puts "#{index+1}. Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+      puts "#{index + 1}. Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
     end
     person_index = gets.chomp.to_i
     person_index -= 1
@@ -105,7 +103,8 @@ class App
     puts 'Rentals:'
     @rentals.each_with_index do |rental, index|
       if rental.person.id == person_id
-        puts "#{index+1}) Date: #{rental.date}, Book #{rental.book.title} by #{rental.book.author} borrowed by #{rental.person.name}"
+        output = "#{rental.date}, Book: #{book_title}, Author: #{book_author}, Person: #{person_name}"
+        puts "#{index + 1}) Date: #{output}"
       end
     end
     puts ''
