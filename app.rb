@@ -58,7 +58,7 @@ class App
     print 'Name:'
     name = gets.chomp
     print 'Specialization:'
-    specialization = gets.chomp
+    gets.chomp
     person = Teacher.new(age, 'Unknown', name)
     @people.push(person)
     puts 'Teacher created successfully'
@@ -103,8 +103,8 @@ class App
     puts 'Rentals:'
     @rentals.each_with_index do |rental, index|
       if rental.person.id == person_id
-        output = "#{rental.date}, Book: #{rental.book.title}, Author: #{rental.book.author}, Person: #{rental.person.name}"
-        puts "#{index + 1}) Date: #{output}"
+        out = "#{rental.date}, Book: #{rental.book.title}, Author: #{rental.book.author}, Person: #{rental.person.name}"
+        puts "#{index + 1}) Date: #{out}"
       end
     end
     puts ''
