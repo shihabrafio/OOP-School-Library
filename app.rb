@@ -104,7 +104,7 @@ class App
     @rentals.each_with_index do |rental, index|
       if rental.person.id == person_id
         o = "#{rental.date}, Book: #{rental.book.title}, Author: #{rental.book.author}, Person: #{rental.person.name}"
-        puts "#{index + 1}) Date: #{out}"
+        puts "#{index + 1}) Date: #{o}"
       end
     end
     puts ''
