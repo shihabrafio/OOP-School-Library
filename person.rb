@@ -33,7 +33,6 @@ class Person < Nameable
   end
 
   private :of_age?
-
 end
 
 # person = Person.new(22, 'maximilianus')

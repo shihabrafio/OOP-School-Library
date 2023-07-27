@@ -2,7 +2,8 @@ require_relative 'Person'
 
 class Teacher < Person
   attr_accessor :specialization
-  def initialize(age, specialization, name)
+
+  def initialize(age, _specialization, name)
     super(age, name)
     @specialization = 'Unknown'
   end
