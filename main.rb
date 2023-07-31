@@ -8,7 +8,7 @@ def main()
 
   puts '
 Welcome to School Library App!
-------------------------------
+----------------------------
 '
   option = 0
   while option != '7'
