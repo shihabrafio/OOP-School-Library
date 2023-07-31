@@ -1,4 +1,4 @@
-# rubocop:disable Naming/main.rb
+# /main.rb
 require_relative 'app'
 
 def main()
