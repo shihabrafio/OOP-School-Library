@@ -1,10 +1,9 @@
 require_relative 'app'
+require_relative 'logic'
 
 def main()
   app = App.new
-  books = []
-  people = []
-  rentals = []
+  logic = Logic.new(app)
   puts ''
   puts 'Welcome to School Library App!'
   puts '------------------------------'
@@ -21,34 +20,7 @@ def main()
     puts '7. Exit'
     puts ''
     option = gets.chomp
-    case option
-    when '1'
-      if books.empty?
-        puts 'There are no books'
-        puts ''
-        next
-      end
-      app.list_books(books)
-    when '2'
-      if people.empty?
-        puts 'There are no people'
-        puts ''
-        next
-      end
-      app.list_people(people)
-    when '3'
-      people.push(app.create_person)
-    when '4'
-      books.push(app.create_book)
-    when '5'
-      rentals.push(app.create_rental(books, people))
-    when '6'
-      app.list_rentals
-    when '7'
-      puts 'Goodbye!'
-    else
-      puts 'Invalid option. Try again!'
-    end
+    logic.run(option)
   end
 end
 main
