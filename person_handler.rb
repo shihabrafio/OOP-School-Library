@@ -30,8 +30,8 @@ module PersonModule
     print 'Name:'
     name = gets.chomp
     print 'Specialization:'
-    gets.chomp
-    person = Teacher.new(age, 'Unknown', name)
+    specialization=gets.chomp
+    person = Teacher.new(age, specialization, name)
     @people.push(person)
     puts 'Teacher created successfully'
   end
