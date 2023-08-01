@@ -17,5 +17,5 @@ module PreserveData
     File.write('./datas/books.json', Json.generate(books), mode: 'w')
     File.write('./datas/people.json', Json.generate(people), mode: 'w')
     File.write('./datas/rentals.json', Json.generate(rentals), mode: 'w')
-  exit
+  end
 end
