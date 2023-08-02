@@ -1,1 +1,16 @@
-{"Book":{"title":"Book 1","author":"Author 1"}}
+{
+  "Books": [
+    {
+      "title": "asdas",
+      "author": "asdasd"
+    },
+    {
+      "title": "asdasd",
+      "author": "asdas"
+    },
+    {
+      "title": "dsad",
+      "author": "sad"
+    }
+  ]
+}
