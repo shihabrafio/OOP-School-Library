@@ -37,7 +37,7 @@ class Save
                                                            }))
   end
 
-  def save_rentals(date, books, people)
+  def save_rentals(_date, books, people)
     rentals_data = []
     books.each do |book|
       book.rentals.each do |rental|
