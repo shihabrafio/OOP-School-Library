@@ -18,11 +18,14 @@ module PersonModule
     name = gets.chomp
     print 'Has parent permission? [Y/N]'
     parent_permission_input = gets.chomp.downcase
-    parent_permission = parent_permission_input == 'y'
+    if parent_permission = parent_permission_input == 'y'
     person = Student.new(age, name, parent_permission)
     @people.push(person)
     puts 'Student created successfully'
     save_people_data(@people)
+    else 
+      puts 'Sorry Cannot create a student without parent permission'
+    end
   end
 
   def create_teacher
