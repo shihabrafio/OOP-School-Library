@@ -3,21 +3,38 @@ require_relative 'classes/classroom'
 
 class Save
   def save_books(books)
-    File.write('./datas/books.json', JSON.pretty_generate({ 'Books' => books.map do |book|
-                                                                              { 'title' => book.title, 'author' => book.author }
-                                                                            end }))
+    File.write('./datas/books.json', JSON.pretty_generate({
+                                                            'Books' => books.map do |book|
+                                                              {
+                                                                'title' => book.title,
+                                                                'author' => book.author
+                                                              }
+                                                            end
+                                                          }))
   end
 
   def save_people(people)
-    File.write('./datas/people.json', JSON.pretty_generate({ 'People' => people.map do |person|
-                                                                                if person.instance_of?(Student)
-                                                                                  { 'type' => person.class, 'age' => person.age, 'name' => person.name,
-                                                                                    'parent_permission' => person.parent_permission, 'id' => person.id }
-                                                                                else
-                                                                                  { 'type' => person.class, 'age' => person.age, 'name' => person.name, 'specialization' => person.specialization,
-                                                                                    'id' => person.id }
-                                                                                end
-                                                                              end }))
+    File.write('./datas/people.json', JSON.pretty_generate({
+                                                             'People' => people.map do |person|
+                                                               if person.instance_of?(Student)
+                                                                 {
+                                                                   'type' => person.class,
+                                                                   'age' => person.age,
+                                                                   'name' => person.name,
+                                                                   'parent_permission' => person.parent_permission,
+                                                                   'id' => person.id
+                                                                 }
+                                                               else
+                                                                 {
+                                                                   'type' => person.class,
+                                                                   'age' => person.age,
+                                                                   'name' => person.name,
+                                                                   'specialization' => person.specialization,
+                                                                   'id' => person.id
+                                                                 }
+                                                               end
+                                                             end
+                                                           }))
   end
 
   def save_rentals(books, people)
@@ -50,15 +67,14 @@ class Save
 
     people_data = JSON.parse(File.read(file_path))
     people_list = []
-    classrooms = {}
     # Create and store classrooms first
     people_data['People'].each do |person_data|
-      if person_data['type'] == 'Student'
-        people_list << Student.new(person_data['age'], person_data['name'],
+      people_list << if person_data['type'] == 'Student'
+                       Student.new(person_data['age'], person_data['name'],
                                    parent_permission: person_data['parent_permission'])
-      else
-        people_list << Teacher.new(person_data['age'],person_data['specialization'], person_data['name'])
-      end
+                     else
+                       Teacher.new(person_data['age'], person_data['specialization'], person_data['name'])
+                     end
     end
     # Create students and teachers with proper classroom objects
     people_list
