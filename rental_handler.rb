@@ -17,6 +17,7 @@ module RentalModule
     rental = Rental.new(date, @books[book_index], @people[person_index])
     @rentals.push(rental)
     puts 'Rental created successfully'
+    save_rentals_data(@books, @people, @rentals)
   end
 
   def list_rentals
@@ -29,5 +30,9 @@ module RentalModule
         puts "#{index + 1}) Date: #{o}"
       end
     end
+  end
+
+  def save_rentals_data(books, people, rentals)
+    @data_preserver.save_rentals(books, people, rentals)
   end
 end

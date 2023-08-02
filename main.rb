@@ -28,16 +28,8 @@ Please choose an option by enterin a number (1-7):
     option = gets.chomp
     case option
     when '1'
-      if books.empty?
-        puts 'There are no books!'
-        next
-      end
       app.list_books(books)
     when '2'
-      if people.empty?
-        puts 'There are no people:'
-        next
-      end
       app.list_people(people)
     when '3'
       people.push(app.create_person)
