@@ -14,7 +14,7 @@ class App
     @books = []
     @people = []
     @rentals = []
-    @data_preserver = Save.new 
+    @data_preserver = Save.new
     load_data_from_files
   end
 
