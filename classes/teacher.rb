@@ -5,6 +5,7 @@ class Teacher < Person
 
   def initialize(age, _specialization, name)
     super(age, name)
+    @specialization = _specialization
   end
 
   def can_use_services?
