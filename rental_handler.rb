@@ -33,7 +33,6 @@ module RentalModule
   end
 
   def save_rentals_data(books, people, rentals)
-    @data_preserver ||= Save.new
-    @data_preserver.save_rentals(books, people)
+    @data_preserver.save_rentals(books, people,rentals)
   end
 end
