@@ -10,10 +10,10 @@ describe Teacher do
       expect(@teacher.age).to eq(26)
     end
     it 'test retriving Teacher specialization' do
-      expect(@teacher.specialization).to eq("Maths")
+      expect(@teacher.specialization).to eq('Maths')
     end
     it 'test retriving teacher name' do
-      expect(@teacher.name).to eq("Youssef")
+      expect(@teacher.name).to eq('Youssef')
     end
   end
 
@@ -22,5 +22,4 @@ describe Teacher do
       expect(@teacher.can_use_services?).to be true
     end
   end
-
 end

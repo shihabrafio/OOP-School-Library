@@ -15,6 +15,5 @@ describe Rental do
     it 'returns the correct person' do
       expect(@rental.person).to eql 'Person1'
     end
-
   end
 end
