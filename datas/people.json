@@ -1,2 +1,25 @@
-{"Teacher":{"age":"45","name":"Teacher1","specilization":"EEE","id":"450"},
-"Student":{"age":"4","name":"Student1","parent_permission":true,"id":"123"}}
+{
+  "People": [
+    {
+      "type": "Teacher",
+      "age": "Unknown",
+      "name": "asd",
+      "specialization": "Unknown",
+      "id": 54
+    },
+    {
+      "type": "Student",
+      "age": 54,
+      "name": "asd",
+      "parent_permission": true,
+      "id": 679
+    },
+    {
+      "type": "Student",
+      "age": 4,
+      "name": "asd",
+      "parent_permission": true,
+      "id": 768
+    }
+  ]
+}
