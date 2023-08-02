@@ -11,7 +11,6 @@ module BookModule
   end
 
   def save_books_data(books)
-    @data_preserver ||= Save.new
     @data_preserver.save_books(books)
   end
 end
