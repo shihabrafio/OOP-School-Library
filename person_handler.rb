@@ -9,7 +9,6 @@ module PersonModule
     else
       puts 'Invalid option'
     end
-    save_people_data(@people)
   end
 
   def create_student
@@ -23,6 +22,7 @@ module PersonModule
     person = Student.new(age, name, parent_permission)
     @people.push(person)
     puts 'Student created successfully'
+    save_people_data(@people)
   end
 
   def create_teacher
@@ -35,10 +35,10 @@ module PersonModule
     person = Teacher.new(age, specialization, name)
     @people.push(person)
     puts 'Teacher created successfully'
+    save_people_data(@people)
   end
 
   def save_people_data(people)
-    @data_preserver ||= Save.new
     @data_preserver.save_people(people)
   end
 end
