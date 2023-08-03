@@ -37,7 +37,7 @@ class Save
                                                            }))
   end
 
-  def save_rentals(books, people)
+  def save_rentals(_date, books, people)
     rentals_data = []
     books.each do |book|
       book.rentals.each do |rental|
@@ -67,7 +67,6 @@ class Save
 
     people_data = JSON.parse(File.read(file_path))
     people_list = []
-    # Create and store classrooms first
     people_data['People'].each do |person_data|
       people_list << if person_data['type'] == 'Student'
                        Student.new(person_data['age'], person_data['name'],
@@ -76,7 +75,6 @@ class Save
                        Teacher.new(person_data['age'], person_data['specialization'], person_data['name'])
                      end
     end
-    # Create students and teachers with proper classroom objects
     people_list
   end
 
